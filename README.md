@@ -2,7 +2,7 @@
 
 
 
-Hui Lan <hui.lan@cantab.net>
+
 
 1 November 2019
 
@@ -122,63 +122,6 @@ Can take a picture for text.  Automatic translation.
 
 
 
-## Bug tracking
-
-
-EnglishPal's bugs and improvement suggestions are recorded in [Bugzilla](http://118.25.96.118/bugzilla/buglist.cgi?bug_status=__all__&list_id=1302&order=Importance&product=EnglishPal&query_format=specific).  Send (lanhui at zjnu.edu.cn) an email message for opening a Bugzilla account or reporting a bug.
 
 
 
-## TODO
-
-
-- Fix Bug: Internal server error when register using an email address.
-
-- Usability testing
-
-
-## Improvements made by contributors
-
-
-### 朱文绮
-
-
-在生词簿每个单词后面，加上两个按钮，熟悉与不熟悉:
-
-- 如果点熟悉，就将生词簿中该单词后面记录的添加次数减一，直至减为0，就将该单词从生词簿中移除。
-
-- 如果点不熟悉，就将生词簿中该单词后面记录的添加次数加一。
-
-### 李康恬
-
-
-Add the function of "Delete already known and well-known words from
-the words' library", on the one hand, it can conform to the usage
-habits of some users, who do not like that their words' libraries have
-too many words that they already know, on the other hand, it can
-reduce unnecessary memory occupied by the database, in addition, it
-can also improve the simplicity of the page.
-
-More information at: http://118.25.96.118/kanboard/?controller=TaskViewController&action=readonly&task_id=736&token=81a561da57ff7a172da17a480f0d421ff3bc69efbd29437daef90b1b8959
-
-
-### 占健豪
-
-
-Click the Familiar or Unfamiliar button (current word frequency>1), the current word position is displayed at the top of the page;
-
-Click the Familiar or Unfamiliar button (current word frequency is 1), and the page will be displayed as the top of the entire page.
-
-Demo video link: https://b23.tv/QuB77m
-
-### 张小飞
-
-
-修复了以下漏洞。
-
-漏洞：用 `‘ or ‘1’=‘1’` 这段字符可以作为任何账号的密码登录。
-
-Bug report: http://118.25.96.118/bugzilla/show_bug.cgi?id=215
-
-
-*Last modified on 2021-10-17*
