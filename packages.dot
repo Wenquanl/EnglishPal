@@ -1,0 +1,23 @@
+digraph "packages" {
+rankdir=BT
+charset="utf-8"
+"app" [color="black", label="app", shape="box", style="solid"];
+"app.UseSqlite" [color="black", label="app.UseSqlite", shape="box", style="solid"];
+"app.WordFreq" [color="black", label="app.WordFreq", shape="box", style="solid"];
+"app.difficulty" [color="black", label="app.difficulty", shape="box", style="solid"];
+"app.main" [color="black", label="app.main", shape="box", style="solid"];
+"app.pickle_idea" [color="black", label="app.pickle_idea", shape="box", style="solid"];
+"app.pickle_idea2" [color="black", label="app.pickle_idea2", shape="box", style="solid"];
+"app.tools" [color="black", label="app.tools", shape="box", style="solid"];
+"app.wordfreqCMD" [color="black", label="app.wordfreqCMD", shape="box", style="solid"];
+"app.WordFreq" -> "app.wordfreqCMD" [arrowhead="open", arrowtail="none"];
+"app.difficulty" -> "app.wordfreqCMD" [arrowhead="open", arrowtail="none"];
+"app.main" -> "app.UseSqlite" [arrowhead="open", arrowtail="none"];
+"app.main" -> "app.WordFreq" [arrowhead="open", arrowtail="none"];
+"app.main" -> "app.difficulty" [arrowhead="open", arrowtail="none"];
+"app.main" -> "app.wordfreqCMD" [arrowhead="open", arrowtail="none"];
+"app.tools" -> "app.UseSqlite" [arrowhead="open", arrowtail="none"];
+"app.tools" -> "app.WordFreq" [arrowhead="open", arrowtail="none"];
+"app.tools" -> "app.difficulty" [arrowhead="open", arrowtail="none"];
+"app.tools" -> "app.wordfreqCMD" [arrowhead="open", arrowtail="none"];
+}

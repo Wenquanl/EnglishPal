@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=3.0, user-scalable=yes" />
+        <script type="text/javascript"src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        var isCheckAll = false;
+        function swapCheck() {
+            $("input[type='checkbox']").each(function() {
+                this.checked = !isCheckAll;
+            });
+            isCheckAll = !isCheckAll;
+        }
+    </script>
+</head>
+<body>
+<p>勾选不认识的单词</p>
+
+        <form method="post" action="/{{ cc.username }}/mark">
+         <input type="submit" name="add-btn" value="加入我的生词簿"/>
+         <p><input type="checkbox" onclick="swapCheck()" />全选</p>
+     <script>
+        var i=0;
+     </script>
+ {% for  x in  cc.lst %}
+    <script>
+        i=i+1;
+    </script>
+            <p><font color="grey"><script>document.write(i)</script></font>: <a href="" title="">{{  x[0]}}</a> {{ x[1] }}  <input type="checkbox" name="marked" value="{{ x[0] }}"></p>
+ {% endfor %}
+        </form>
+</body>
+</html>

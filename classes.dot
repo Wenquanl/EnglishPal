@@ -1,0 +1,10 @@
+digraph "classes" {
+rankdir=BT
+charset="utf-8"
+"app.UseSqlite.InsertQuery" [color="black", fontcolor="black", label="{InsertQuery|query\l|instructions(query)\l}", shape="record", style="solid"];
+"app.UseSqlite.RecordQuery" [color="black", fontcolor="black", label="{RecordQuery|query\l|format_results()\lget_results()\linstructions(query)\l}", shape="record", style="solid"];
+"app.UseSqlite.Sqlite3Template" [color="black", fontcolor="black", label="{Sqlite3Template|conn\ldb_fname\lparameters\lquery\lresults\l|connect(db_fname)\ldo()\ldo_with_parameters()\lformat_results()\linstructions(query_statement)\linstructions_with_parameters(query_statement, parameters)\loperate()\loperate_with_parameters()\l}", shape="record", style="solid"];
+"app.WordFreq.WordFreq" [color="black", fontcolor="black", label="{WordFreq|s\l|get_freq()\l}", shape="record", style="solid"];
+"app.UseSqlite.InsertQuery" -> "app.UseSqlite.Sqlite3Template" [arrowhead="empty", arrowtail="none"];
+"app.UseSqlite.RecordQuery" -> "app.UseSqlite.Sqlite3Template" [arrowhead="empty", arrowtail="none"];
+}
